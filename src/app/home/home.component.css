@@ -1,0 +1,363 @@
+.section2{
+
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 40px;
+width: 950px;
+margin-left: 10px;
+
+}
+
+.image10:hover{
+
+cursor: pointer;
+position: relative;
+height: 300px;
+width: 300px;
+margin-left: -16px;
+margin-top: -40px;
+transition: 0.3s;
+
+}
+
+.card{
+
+background-color: rgb(0, 0, 0);
+border: ridge 2px;
+}
+
+.card:hover{
+
+border: 5px ridge ;
+transition: 0.1s;
+
+}
+
+h5, p {
+
+color: white;
+
+}
+
+
+.center{
+
+display: flex;
+gap: 20px;
+justify-content: center;
+
+}
+
+.spice{
+
+text-align: center;
+
+}
+
+.price{
+
+    font-size: 40px;
+    text-align: right;
+   margin-left: auto;
+   margin-top: 3px;
+   
+}
+
+
+.cart{
+
+background-color: rgb(4, 180, 4);
+border-radius: 10px;
+margin-top: 10px;
+height: 50px;
+border: ridge 2px;
+
+}
+
+.cart:hover{
+
+background-color:rgb(1, 121, 1);
+transition: 0.1s;
+border: 4px ridge;
+}
+
+
+.title{
+
+display: flex;
+justify-content: center;
+font-size: 24px;
+
+}
+
+
+
+.section1{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+    height: 14px;
+    margin-bottom: 30px;
+
+}
+
+.mainButtons{
+
+border-radius: 5px;
+border: ridge 2px white;
+background-color: black;
+color: white;
+    
+}
+
+.mainButtons:hover{
+
+background-color: rgb(41, 41, 41);
+transition: 0.1s;
+border: ridge 3px white;
+
+}
+
+.ptag1.animate {
+    position: absolute;
+    position: fixed;
+    top: 0px;
+    animation-name: slideIn;
+    animation-duration: 6s;
+    z-index: 100;
+  }
+
+  .ptag2.animate {
+    position: absolute;
+    position: fixed;
+    top: 0px;
+    animation-name: slideIn1;
+    animation-duration: 6s;
+    z-index: 100;
+  }
+
+  @keyframes slideIn1 {
+    0%{top: 150px; color: rgba(21, 255, 0, 0);}
+    40%{color: rgb(51, 255, 0);}
+    100%{top: 0px; color: rgb(60, 255, 0);}
+  }
+
+  @keyframes slideIn {
+    0%{top: 150px; color: rgba(255, 0, 0, 0);}
+    40%{color: rgb(255, 0, 0);}
+    100%{top: 0px; color: rgb(255, 0, 0);}
+  }
+
+.ptagdiv{
+
+display: flex;
+justify-content: center;
+position: fixed;
+z-index: 100;
+width: 100%;
+top: 0;
+
+}
+
+.filter{
+
+width: 245px;
+height: 227px;
+display: flex;
+flex-direction: column;
+border: ridge 2px white;
+border-radius: 7px;
+margin-left: 20px;
+
+
+}
+
+
+.filterImg{
+
+height: 20px;
+filter: invert(1);
+
+}
+
+label{
+
+color: white;
+
+}
+
+.divForCheckbox{
+
+margin-left: 60px;
+
+}
+
+.filterText{
+
+margin-left: 10px;
+
+}
+
+.checkbox1{
+
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 10px;
+      background-color: rgb(0, 0, 0);
+      cursor: pointer;
+      margin-top: -4px;
+      margin-bottom: -4px;
+      border: 3px ridge rgb(255, 255, 255);
+
+    }
+
+    .checkbox1:hover{
+
+      background-color: yellow !important;
+
+    }
+    
+    .checkbox1:checked{
+
+      background-color: rgb(50, 138, 0);
+
+    }
+
+.filterButton{
+
+margin-left: 8px;
+margin-right: 8px;
+
+}
+
+.divForCombine{
+
+display: flex;
+justify-content: center;
+
+}
+
+
+.filterButton{
+
+border-radius: 5px;
+border: ridge 2px white;
+background-color: black;
+color: white;
+      
+}
+  
+.filterButton:hover{
+  
+background-color: rgb(41, 41, 41);
+transition: 0.1s;
+border: ridge 3px white;
+  
+}
+
+.filterRange{
+appearance: none;
+border: 2px ridge rgb(255, 255, 255);
+background-color: black;
+border-radius: 2px;
+}
+
+.filterRange::-webkit-slider-thumb{
+
+appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  margin-top: -4px;
+  margin-bottom: -4px;
+  border: 3px ridge rgb(255, 255, 255);
+}
+
+
+
+@media only screen and (max-width: 880px) {
+    
+.section1{
+
+flex-wrap: wrap;
+margin-bottom: 75px;
+
+}
+
+}
+
+
+@media only screen and (max-width: 461px) {
+    
+.section1{
+        
+flex-wrap: wrap;
+margin-bottom: 110px;
+        
+}
+        
+}
+
+@media only screen and (max-width: 335px) {
+    
+.section1{
+    
+flex-wrap: wrap;
+margin-bottom: 150px;
+    
+}
+    
+}
+
+
+@media only screen and (max-width:1219px) {
+  
+.section2{
+
+width: 630px;
+
+}
+
+}
+
+
+@media only screen and (max-width:890px) {
+  
+  .section2{
+  
+  width: 310px;
+  
+  }
+  
+  }
+
+
+@media only screen and (max-width:552px) {
+  
+.divForCombine{
+
+flex-direction: column;
+
+}
+
+.section2{
+
+width: auto;
+
+}
+
+.filter{
+
+align-self: center;
+margin-left: 10px;
+margin-bottom: 13px;
+
+}
+    
+}

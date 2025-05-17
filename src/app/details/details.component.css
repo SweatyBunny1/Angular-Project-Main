@@ -1,0 +1,169 @@
+p{
+
+color: white;
+
+}
+
+.section1{
+
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 130px;
+
+}
+
+.div2{
+
+  display: flex; 
+  align-items: center; 
+  border: ridge white 2px;
+  border-radius: 10px;
+  background-color: black;
+
+}
+
+.div2:hover{
+
+transition: 0.1s;
+border: ridge 3px white;
+
+
+}
+
+.div1{
+
+margin-left: 60px;
+margin-right: 23px;
+
+}
+
+.name{
+
+font-size: 35px;
+
+}
+
+
+
+.price{
+
+font-size: 28px;
+
+}
+
+.cart{
+
+    background-color: rgb(4, 180, 4);
+    border-radius: 10px;
+    margin-top: 10px;
+    height: 50px;
+    border: ridge 2px;
+    
+    
+    }
+    
+    .cart:hover{
+    
+    background-color:rgb(1, 121, 1);
+    transition: 0.1s;
+    border: 4px ridge;
+    }
+
+.ptag1.animate {
+    position: absolute;
+    position: fixed;
+    top: 0px;
+    animation-name: slideIn;
+    animation-duration: 6s;
+    z-index: 100;
+  }
+
+  .ptag2.animate {
+    position: absolute;
+    position: fixed;
+    top: 0px;
+    animation-name: slideIn1;
+    animation-duration: 6s;
+    z-index: 100;
+  }
+
+  @keyframes slideIn1 {
+    0%{top: 150px; color: rgba(21, 255, 0, 0);}
+    40%{color: rgb(51, 255, 0);}
+    100%{top: 0px; color: rgb(60, 255, 0);}
+  }
+
+  @keyframes slideIn {
+    0%{top: 150px; color: rgba(255, 0, 0, 0);}
+    40%{color: rgb(255, 0, 0);}
+    100%{top: 0px; color: rgb(255, 0, 0);}
+  }
+
+  .ptagdiv{
+
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    
+    }
+
+@media only screen and (max-width: 772px) {
+  
+.div2{
+
+flex-direction: column;
+
+
+}
+
+.img{
+
+height: 400px;
+
+}
+
+.section1{
+
+margin-top: 20px;
+
+}
+
+.div1{
+
+display: flex;
+flex-direction: column;
+margin-left: auto;
+margin-right: auto;
+align-items: center;
+
+}
+
+.cart{
+
+margin-bottom: 20px;
+
+}
+
+.name{
+
+font-size: 23px;
+
+}
+
+}
+
+
+@media only screen and (max-width: 416px) {
+  
+.img{
+
+height: 260px;
+
+}
+
+}
+

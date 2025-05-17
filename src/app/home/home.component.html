@@ -1,0 +1,79 @@
+<div class="ptagdiv">
+<p style="color: red;" class="ptag1">This item has already been added!</p>
+<p style="color: rgb(2, 201, 2);" class="ptag2">Added Succesfully!</p>
+</div>
+
+<section class="section1">
+
+  <div>
+<button (click)="AllButton()" class="mainButtons">All</button>
+</div>
+
+<article *ngFor="let item of categoryData" class="article1">
+
+<button (click)="returnCategoryId(item.id)" class="mainButtons">{{item.name}}</button>
+
+</article>
+
+</section>
+
+
+<div class="divForCombine">
+
+
+<div class="filter">
+
+<div style="width: 241px; display: flex; gap: 170px; justify-content: center; margin-top: 5px;">
+<p>Filter</p>
+<img class="filterImg" src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/filter-512.png" alt="">
+</div>
+
+<div style="display: flex; justify-content: center;">
+<div style="display: flex; flex-direction: column;">
+<label style="display: flex; align-self: center; margin-top: -20px; margin-bottom: 10px;" class="range" for="range">🌶️Spiciness: {{spiciness}}</label>
+<input [(ngModel)]="spiciness" min="-1" max="4" style="margin-bottom: 10px;" class="filterRange" type="range">
+</div>
+</div>
+
+<div class="divForCheckbox">
+<input [(ngModel)]="nuts" class="checkbox1" type="checkbox">
+<label class="filterText" for="checkbox">🥜Nuts</label>
+</div>
+
+<div class="divForCheckbox">
+<input [(ngModel)]="veg" class="checkbox1" type="checkbox">
+<label class="filterText" for="checkbox">🥦Vegeterian</label>
+</div>
+
+<button (click)="resetFilter()" style="margin-top: 10px; margin-bottom: 10px;" class="filterButton">Reset</button>
+<button (click)="filtering()" class="filterButton">Apply Filter</button>
+
+</div>
+ 
+
+
+<section class="section2" id="section2">
+
+    <div *ngFor="let item of objectData" class="card" style="width: 18rem;">
+        <img routerLink="/details/{{item.id}}" class="card-img-top image10" [src]="item.image" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title title">{{item.name}}</h5>
+         
+         <div class="centerforthree">
+          <p class="card-text spice">🌶️Spiciness: {{item.spiciness}}</p>
+          <div class="center">
+          <p class="card-text">🥦Vegeterian: {{item.vegeterian}}</p>
+          <p class="card-text">🥜Nuts: {{item.nuts}}</p>
+          </div>
+         </div>
+          <div style="display: flex;">
+          <button (click)="addToCart(item.id - 1, item.price, item.id, item.name)" class="cart">Add To Cart</button>
+          <p class="card-text price">{{item.price}}$</p>
+        </div>
+        </div>
+      </div>
+
+</section>
+
+</div>
+

@@ -1,0 +1,23 @@
+<div class="ptagdiv">
+    <p style="color: red;" class="ptag1">This item has already been added!</p>
+    <p style="color: rgb(2, 201, 2);" class="ptag2">Added Succesfully!</p>
+</div>
+    
+<section class="section1">
+
+<div class="div2">
+<img class="img" [src]="img" alt="">
+
+<div class="div1">
+<p class="name">{{name}}</p>
+<p class="price">{{price}}$</p>
+<p class="info">🌶️Spiciness Level: {{spiciness}}</p>
+<p class="info">🥦Vegeterian: {{veg}}</p>
+<p class="info">🥜Nuts: {{nuts}}</p>
+
+<button (click)="addToCart()" class="cart">Add To Cart</button>
+
+</div>
+</div>
+
+</section>

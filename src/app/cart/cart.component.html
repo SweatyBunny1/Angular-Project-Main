@@ -1,0 +1,46 @@
+<div class="onTopMain">
+<div class="mainDiv">
+<tr class="mainTop">
+
+<th class="th1">Product</th>
+<th class="th2">Qty</th>
+<th class="th3">Price</th>
+<th>Total</th>
+
+</tr>
+
+
+<article *ngFor="let item of info">
+
+    <div class="line"></div>
+<tr class="tr-2">
+
+   
+    <img (click)="deleteProduct(item.product.id)" class="delete" src="https://www.pngall.com/wp-content/uploads/5/Delete-Red-X-Button-PNG-Image.png" alt="">
+    
+    <img class="img-1" [src]="item.product.image" alt="">
+    
+    <div class="div2">
+    <span class="span1">
+    <th class="productName">{{item.product.name}}</th>
+    </span>
+    <div class="div1">
+    <section class="section1">
+        <button (click)="basketUpdaterPLUS(item.quantity, item.product.id)" class="px1">+</button>
+        <p class="p1">{{item.quantity}}</p>
+        <button (click)="basketUpdaterMINUS(item.quantity, item.product.id)" class="px2">-</button>
+    </section>
+    </div>
+    <span class="span2">
+    <th>{{item.product.price}}$</th>
+    </span>
+    <th class="total1">{{item.product.price * item.quantity}}$</th>
+</div>
+    </tr>
+</article>
+<p class="total">Total: {{money}}$ </p>
+
+<button class="checkout">PROCEED TO CHECKOUT</button>
+
+</div>
+</div>
