@@ -125,30 +125,46 @@ this.getInfo()
 
 }
 
-spiciness:string = "-1"
+spiciness:any = "-1"
 
-nuts:string = "true"
+nuts:string = "false"
 
-veg:string = "true"
+veg:string = "false"
 
 filtering(){
 
+  if(this.spiciness == -1){
+    
+    this.myservice.getFiltered(this.veg, this.nuts).subscribe(data => {
 
-this.myservice.getFiltered(this.veg, this.nuts, this.spiciness).subscribe(data => {
+      this.objectData = data
 
-this.objectData = data
+    })
 
-})
+  }
+  else{
+
+    this.myservice.getFilteredSpice(this.veg, this.nuts, this.spiciness).subscribe(data => {
+
+      this.objectData = data
+
+    })
+
+  }
+
+
 
 }
 
 resetFilter(){
 
-this.spiciness = "1"
+this.spiciness = "-1"
 
-this.nuts = "true"
+this.nuts = "false"
 
-this.veg = "true"
+this.veg = "false"
+
+this.AllButton()
 
 }
 

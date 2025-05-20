@@ -12,11 +12,12 @@ import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     HomeComponent,
     NavbarComponent,
     DetailsComponent,
-    CartComponent
+    CartComponent,
     
   ],
   imports: [

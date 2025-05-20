@@ -14,12 +14,24 @@ return this.http.get(`https://restaurant.stepprojects.ge/api/Products/GetAll`)
 
   }
 
+  registerUser(info:any){
+
+    console.log(info)
+return this.http.post('https://rentcar.stepprojects.ge/api/Users/register', info)
+
+  }
+
+   loginUser(info:any){
+console.log(info)
+return this.http.post('https://rentcar.stepprojects.ge/api/Users/login', info)
+
+  }
+
   getBasket(){
 
 return this.http.get(`https://restaurant.stepprojects.ge/api/Baskets/GetAll`)
     
   }
-
 
   updateBasket(info:any){
 
@@ -59,9 +71,15 @@ return this.http.get(`https://restaurant.stepprojects.ge/api/Categories/GetCateg
 
   }
 
-  getFiltered(veg:any, nuts:any, spice:any){
+  getFilteredSpice(veg:any, nuts:any, spice:any){
 
 return this.http.get(`https://restaurant.stepprojects.ge/api/Products/GetFiltered?vegeterian=${veg}&nuts=${nuts}&spiciness=${spice}`)
+
+  }
+
+  getFiltered(veg:any, nuts:any){
+
+return this.http.get(`https://restaurant.stepprojects.ge/api/Products/GetFiltered?vegeterian=${veg}&nuts=${nuts}`)
 
   }
 
